@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaldi Aao Jaldi Kamao - Investment Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-inner"></div>
+            <div class="loader-inner"></div>
+            <div class="loader-inner"></div>
+            <div class="loader-inner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo animate__animated animate__fadeIn">Jaldi Aao Jaldi Kamao</a>
+            <div class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#packages">Packages</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <button class="btn login-btn">Login</button>
+                <button class="btn signup-btn">Sign Up</button>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Auth Modals -->
+    <div class="auth-modal" id="login-modal">
+        <div class="auth-content animate__animated animate__zoomIn">
+            <span class="close-modal">&times;</span>
+            <h2>Login to Your Account</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <p>Don't have an account? <a href="#" class="switch-to-signup">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div class="auth-modal" id="signup-modal">
+        <div class="auth-content animate__animated animate__zoomIn">
+            <span class="close-modal">&times;</span>
+            <h2>Create New Account</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-phone">Phone Number</label>
+                    <input type="tel" id="signup-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-confirm-password">Confirm Password</label>
+                    <input type="password" id="signup-confirm-password" required>
+                </div>
+                <div class="form-group">
+                    <label for="signup-referral">Referral Code (Optional)</label>
+                    <input type="text" id="signup-referral">
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+                <p>Already have an account? <a href="#" class="switch-to-login">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content animate__animated animate__fadeInLeft">
+                <h1>Invest Today, Earn Tomorrow</h1>
+                <p>Join our platform and start earning with our high-return investment packages. Secure, reliable, and profitable.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Get Started</button>
+                    <button class="btn btn-outline">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-image animate__animated animate__fadeInRight">
+                <img src="images/investment-hero.png" alt="Investment Illustration">
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="packages" id="packages">
+        <div class="container">
+            <h2 class="section-title animate__animated animate__fadeIn">Our Investment Packages</h2>
+            <p class="section-subtitle animate__animated animate__fadeIn">Choose the package that suits your investment goals</p>
+            
+            <div class="packages-grid">
+                <!-- Package 1 -->
+                <div class="package-card animate__animated animate__fadeInUp">
+                    <div class="package-header">
+                        <h3>Basic</h3>
+                        <div class="package-price">₨1,000</div>
+                    </div>
+                    <div class="package-details">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Profit: ₨2,000</li>
+                            <li><i class="fas fa-check"></i> Duration: 30 Days</li>
+                            <li><i class="fas fa-check"></i> Daily Earnings: ₨66.67</li>
+                        </ul>
+                        <button class="btn invest-btn" data-package="1">Invest Now</button>
+                    </div>
+                </div>
+                
+                <!-- Package 2 -->
+                <div class="package-card animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                    <div class="package-header">
+                        <h3>Starter</h3>
+                        <div class="package-price">₨2,000</div>
+                    </div>
+                    <div class="package-details">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Profit: ₨4,000</li>
+                            <li><i class="fas fa-check"></i> Duration: 30 Days</li>
+                            <li><i class="fas fa-check"></i> Daily Earnings: ₨133.33</li>
+                        </ul>
+                        <button class="btn invest-btn" data-package="2">Invest Now</button>
+                    </div>
+                </div>
+                
+                <!-- Package 3 -->
+                <div class="package-card animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                    <div class="package-header">
+                        <h3>Standard</h3>
+                        <div class="package-price">₨3,000</div>
+                    </div>
+                    <div class="package-details">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Profit: ₨6,000</li>
+                            <li><i class="fas fa-check"></i> Duration: 30 Days</li>
+                            <li><i class="fas fa-check"></i> Daily Earnings: ₨200</li>
+                        </ul>
+                        <button class="btn invest-btn" data-package="3">Invest Now</button>
+                    </div>
+                </div>
+                
+                <!-- Package 4 -->
+                <div class="package-card animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                    <div class="package-header">
+                        <h3>Premium</h3>
+                        <div class="package-price">₨5,000</div>
+                    </div>
+                    <div class="package-details">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Profit: ₨10,000</li>
+                            <li><i class="fas fa-check"></i> Duration: 30 Days</li>
+                            <li><i class="fas fa-check"></i> Daily Earnings: ₨333.33</li>
+                        </ul>
+                        <button class="btn invest-btn" data-package="4">Invest Now</button>
+                    </div>
+                </div>
+                
+                <!-- Package 5 -->
+                <div class="package-card animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                    <div class="package-header">
+                        <h3>Advanced</h3>
+                        <div class="package-price">₨7,000</div>
+                    </div>
+                    <div class="package-details">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Profit: ₨14,000</li>
+                            <li><i class="fas fa-check"></i> Duration: 40 Days</li>
+                            <li><i class="fas fa-check"></i> Daily Earnings: ₨350</li>
+                        </ul>
+                        <button class="btn invest-btn" data-package="5">Invest Now</button>
+                    </div>
+                </div>
+                
+                <!-- Package 6 -->
+                <div class="package-card animate__animated animate__fadeInUp" style="animation-delay: 0.6s;">
+                    <div class="package-header">
+                        <h3>Professional</h3>
+                        <div class="package-price">₨10,000</div>
+                    </div>
+                    <div class="package-details">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Profit: ₨22,000</li>
+                            <li><i class="fas fa-check"></i> Duration: 35 Days</li>
+                            <li><i class="fas fa-check"></i> Daily Earnings: ₨628.57</li>
+                        </ul>
+                        <button class="btn invest-btn" data-package="6">Invest Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Modal -->
+    <div class="investment-modal">
+        <div class="investment-content animate__animated animate__zoomIn">
+            <span class="close-investment">&times;</span>
+            <h2>Complete Your Investment</h2>
+            <div class="investment-details">
+                <h3 id="selected-package-name">Package Name</h3>
+                <p id="selected-package-details">Package details will appear here</p>
+                <div class="payment-methods">
+                    <h4>Payment Methods</h4>
+                    <div class="payment-options">
+                        <div class="payment-option active" data-method="easypaisa">
+                            <img src="images/easypaisa-logo.png" alt="EasyPaisa">
+                            <span>EasyPaisa</span>
+                        </div>
+                        <div class="payment-option" data-method="jazzcash">
+                            <img src="images/jazzcash-logo.png" alt="JazzCash">
+                            <span>JazzCash</span>
+                        </div>
+                    </div>
+                    <div class="payment-instructions">
+                        <p>Send payment to:</p>
+                        <div class="payment-info">
+                            <p><strong>Name:</strong> Masroor Ahmed</p>
+                            <p><strong>Number:</strong> 03481866809</p>
+                        </div>
+                        <p>After payment, enter the transaction ID below:</p>
+                        <div class="form-group">
+                            <label for="transaction-id">Transaction ID</label>
+                            <input type="text" id="transaction-id" placeholder="Enter your transaction ID">
+                        </div>
+                        <button class="btn confirm-payment">Confirm Payment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Section (Visible after login) -->
+    <section class="dashboard" id="dashboard" style="display: none;">
+        <div class="container">
+            <div class="dashboard-header">
+                <h2>Welcome Back, <span id="user-name">User</span></h2>
+                <div class="dashboard-actions">
+                    <button class="btn btn-primary" id="support-btn">
+                        <i class="fab fa-whatsapp"></i> Support
+                    </button>
+                    <button class="btn btn-outline" id="logout-btn">Logout</button>
+                </div>
+            </div>
+            
+            <div class="dashboard-grid">
+                <!-- User Stats -->
+                <div class="dashboard-card stats-card">
+                    <h3>Your Statistics</h3>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-value" id="total-invested">₨0</div>
+                            <div class="stat-label">Total Invested</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" id="total-earned">₨0</div>
+                            <div class="stat-label">Total Earned</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" id="available-balance">₨0</div>
+                            <div class="stat-label">Available Balance</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value" id="referral-earnings">₨0</div>
+                            <div class="stat-label">Referral Earnings</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Active Investments -->
+                <div class="dashboard-card investments-card">
+                    <h3>Active Investments</h3>
+                    <div class="investments-list" id="active-investments">
+                        <div class="no-investments">
+                            <p>You don't have any active investments yet.</p>
+                            <button class="btn btn-primary" id="invest-now-btn">Invest Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Referral Program -->
+                <div class="dashboard-card referral-card">
+                    <h3>Referral Program</h3>
+                    <div class="referral-content">
+                        <p>Invite friends and earn 10% of their investments!</p>
+                        <div class="referral-code">
+                            <label>Your Referral Code:</label>
+                            <div class="code-box">
+                                <span id="user-referral-code">JAJK1234</span>
+                                <button class="btn copy-btn" id="copy-referral">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="referral-link">
+                            <label>Your Referral Link:</label>
+                            <div class="link-box">
+                                <span id="user-referral-link">https://jaldiaaojaldikamao.com/ref=JAJK1234</span>
+                                <button class="btn copy-btn" id="copy-link">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Withdrawal Form -->
+                <div class="dashboard-card withdrawal-card">
+                    <h3>Withdraw Funds</h3>
+                    <div class="withdrawal-form">
+                        <div class="form-group">
+                            <label for="withdrawal-amount">Amount (Minimum ₨250)</label>
+                            <input type="number" id="withdrawal-amount" min="250" placeholder="Enter amount">
+                        </div>
+                        <div class="form-group">
+                            <label for="withdrawal-method">Payment Method</label>
+                            <select id="withdrawal-method">
+                                <option value="easypaisa">EasyPaisa</option>
+                                <option value="jazzcash">JazzCash</option>
+                                <option value="bank">Bank Transfer</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="withdrawal-account">Account Number</label>
+                            <input type="text" id="withdrawal-account" placeholder="Enter your account number">
+                        </div>
+                        <button class="btn btn-primary" id="request-withdrawal">Request Withdrawal</button>
+                    </div>
+                </div>
+                
+                <!-- Transaction History -->
+                <div class="dashboard-card transactions-card">
+                    <h3>Transaction History</h3>
+                    <div class="transactions-tabs">
+                        <button class="tab-btn active" data-tab="all">All</button>
+                        <button class="tab-btn" data-tab="deposits">Deposits</button>
+                        <button class="tab-btn" data-tab="withdrawals">Withdrawals</button>
+                        <button class="tab-btn" data-tab="earnings">Earnings</button>
+                    </div>
+                    <div class="transactions-list" id="transactions-list">
+                        <div class="no-transactions">
+                            <p>No transactions found.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Panel (Visible to admin users) -->
+    <section class="admin-panel" id="admin-panel" style="display: none;">
+        <div class="container">
+            <h2>Admin Dashboard</h2>
+            
+            <div class="admin-tabs">
+                <button class="admin-tab-btn active" data-tab="users">Users</button>
+                <button class="admin-tab-btn" data-tab="investments">Investments</button>
+                <button class="admin-tab-btn" data-tab="withdrawals">Withdrawals</button>
+                <button class="admin-tab-btn" data-tab="transactions">All Transactions</button>
+                <button class="admin-tab-btn" data-tab="settings">Settings</button>
+            </div>
+            
+            <div class="admin-content" id="users-tab">
+                <h3>Manage Users</h3>
+                <div class="admin-table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Balance</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="users-table-body">
+                            <!-- Users will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="admin-content" id="investments-tab" style="display: none;">
+                <h3>Manage Investments</h3>
+                <div class="admin-table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>User</th>
+                                <th>Package</th>
+                                <th>Amount</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="investments-table-body">
+                            <!-- Investments will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="admin-content" id="withdrawals-tab" style="display: none;">
+                <h3>Manage Withdrawals</h3>
+                <div class="admin-table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>User</th>
+                                <th>Amount</th>
+                                <th>Method</th>
+                                <th>Account</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="withdrawals-table-body">
+                            <!-- Withdrawals will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="admin-content" id="transactions-tab" style="display: none;">
+                <h3>All Transactions</h3>
+                <div class="admin-table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>User</th>
+                                <th>Type</th>
+                                <th>Amount</th>
+                                <th>Details</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="transactions-table-body">
+                            <!-- Transactions will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="admin-content" id="settings-tab" style="display: none;">
+                <h3>System Settings</h3>
+                <div class="settings-form">
+                    <div class="form-group">
+                        <label for="min-withdrawal">Minimum Withdrawal Amount</label>
+                        <input type="number" id="min-withdrawal" value="250">
+                    </div>
+                    <div class="form-group">
+                        <label for="referral-percentage">Referral Percentage (%)</label>
+                        <input type="number" id="referral-percentage" value="10">
+                    </div>
+                    <div class="form-group">
+                        <label for="admin-email">Admin Email</label>
+                        <input type="email" id="admin-email" value="admin@jaldiaaojaldikamao.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="support-number">Support Number</label>
+                        <input type="text" id="support-number" value="+923481866809">
+                    </div>
+                    <button class="btn btn-primary" id="save-settings">Save Settings</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Why Choose Jaldi Aao Jaldi Kamao?</h3>
+                    <p>We are a trusted investment platform helping people grow their money with secure and profitable investment packages. Our mission is to provide financial opportunities to everyone with transparent and reliable services.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Secure and reliable investment platform</li>
+                        <li><i class="fas fa-check-circle"></i> High returns on your investments</li>
+                        <li><i class="fas fa-check-circle"></i> Easy deposit and withdrawal process</li>
+                        <li><i class="fas fa-check-circle"></i> 24/7 customer support</li>
+                        <li><i class="fas fa-check-circle"></i> Referral program to earn more</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="images/about-us.png" alt="About Us">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>support@jaldiaaojaldikamao.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+92 348 1866809</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>+92 348 1866809</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#">Jaldi Aao Jaldi Kamao</a>
+                    <p>Your trusted investment partner for secure and profitable returns.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#packages">Packages</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for updates and offers.</p>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Your Email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Jaldi Aao Jaldi Kamao. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Support Button -->
+    <div class="floating-support">
+        <a href="https://wa.me/923481866809" target="_blank" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Success/Error Notification -->
+    <div class="notification" id="notification">
+        <div class="notification-content">
+            <span class="notification-close">&times;</span>
+            <div class="notification-icon">
+                <i class="fas fa-check-circle" id="success-icon"></i>
+                <i class="fas fa-times-circle" id="error-icon"></i>
+            </div>
+            <div class="notification-text">
+                <h4 id="notification-title">Success</h4>
+                <p id="notification-message">Operation completed successfully.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
